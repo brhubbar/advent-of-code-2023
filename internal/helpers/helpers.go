@@ -6,7 +6,7 @@ import (
 )
 
 // Check for errors and panic if needed.
-func check(e error) {
+func Check(e error) {
 	if e != nil {
 		panic(e)
 	}
@@ -16,6 +16,6 @@ func check(e error) {
 func Read(filename string) string {
 	/* Thanks - https://gobyexample.com/reading-files  */
 	contents, err := os.ReadFile(filename)
-	check(err)
+	Check(err)
 	return string(contents)
 }

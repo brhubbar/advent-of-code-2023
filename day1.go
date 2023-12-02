@@ -5,6 +5,7 @@
 package main
 
 import (
+	"brh/aoc2023/internal/helpers"
 	"fmt"
 	"regexp"
 	"strconv"
@@ -32,9 +33,7 @@ func Day1Part1(data string) int {
 
 		var digits string = string(result[0]) + string(result[len(result)-1])
 		number, err := strconv.Atoi(digits)
-		if err != nil {
-			panic(err)
-		}
+		helpers.Check(err)
 		total += number
 	}
 
@@ -64,9 +63,7 @@ func Day1Part2(data string) int {
 
 		var digits string = string(result[0]) + string(result[len(result)-1])
 		number, err := strconv.Atoi(digits)
-		if err != nil {
-			panic(err)
-		}
+		helpers.Check(err)
 		total += number
 	}
 
