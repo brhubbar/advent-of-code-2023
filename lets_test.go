@@ -15,8 +15,10 @@ func TestParts(t *testing.T) {
 		expected int
 	}{
 		// Put the most recent at the top to help speed things up.
-		{"test/inputs/d2p2", Day2Part2, 2286},
-		{"test/inputs/d2p1", Day2Part1, 8},
+		{"test/inputs/d3p2", Day3Part2, 467835},
+		{"test/inputs/d3p1", Day3Part1, 4361},
+		// {"test/inputs/d2p2", Day2Part2, 2286},
+		// {"test/inputs/d2p1", Day2Part1, 8},
 		// {"test/inputs/d1p2", Day1Part2, 281 + 83 + 79},
 		// {"test/inputs/d1p1", Day1Part1, 142},
 	}
