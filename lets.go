@@ -7,8 +7,8 @@ import (
 
 // Main is called upon `go run .`
 func main() {
-	data := helpers.Read("./inputs/day4")
+	data := helpers.Read("./inputs/day6")
 
-	fmt.Printf("Part 1: %v\n", Day4Part1(data))
-	fmt.Printf("Part 2: %v\n", Day4Part2(data))
+	fmt.Printf("Part 1: %v\n", Day6Part1(data))
+	fmt.Printf("Part 2: %v\n", Day6Part2(data))
 }

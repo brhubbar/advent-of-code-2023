@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math"
 	"strings"
 )
@@ -35,7 +34,6 @@ func Day4Part2(data string) int {
 		you_win = countWinningNumbers(card)
 		n_wins_per_card[idx] = you_win
 	}
-	fmt.Printf("Wins per card: %v\n", n_wins_per_card)
 
 	n_cards := make([]int, len(cards)-1)
 	for idx, n_wins := range n_wins_per_card {
