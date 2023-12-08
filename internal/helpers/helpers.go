@@ -19,3 +19,29 @@ func Read(filename string) string {
 	Check(err)
 	return string(contents)
 }
+
+// greatest common divisor (GCD) via Euclidean algorithm
+// cred: https://siongui.github.io/2017/06/03/go-find-lcm-by-GCD/
+func GCD(a, b int) int {
+	for b != 0 {
+		t := b
+		b = a % b
+		a = t
+	}
+	return a
+}
+
+// find Least Common Multiple (LCM) via GCD
+// cred: https://siongui.github.io/2017/06/03/go-find-LCM-by-gcd/
+func LCM(integers ...int) int {
+	var a, b int
+	a, integers = integers[0], integers[1:]
+	b, integers = integers[0], integers[1:]
+	result := a * b / GCD(a, b)
+
+	for i := 0; i < len(integers); i++ {
+		result = LCM(result, integers[i])
+	}
+
+	return result
+}
